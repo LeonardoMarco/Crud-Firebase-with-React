@@ -1,0 +1,47 @@
+body {
+    background: #edf1f4;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.button-new-user {
+    width: 50%;
+    margin: auto;
+    margin-top: 20vh;
+    margin-bottom: 10px;
+}
+
+.button-new-user a {
+    background: transparent;
+    padding: 10px 20px;
+    border: solid 1px #3f62e6;
+    color: #3f62e6;
+    border-radius: 5px;
+}
+
+.table-users {
+    width: 50%;
+    margin: auto;
+}
+
+.table-users thead th {
+    text-align: left;
+    padding: 20px
+}
+
+.table-users tbody tr {
+    background: #f6f7f7;
+}
+
+.table-users tbody tr td {
+    padding: 20px;
+}
+
+.button-delete {
+    background: #3f62e6;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 0;
+    color: white
+}

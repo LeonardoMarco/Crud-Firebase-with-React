@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-
-import { fireCollection } from '../../services/firebaseConfig'
+import Notification from '../../components/Notification';
+import fireCollection from '../../services/firebaseConfig'
 import Header from '../../components/Header';
 import Loading from '../../components/Loading'
 import './styles.css'
@@ -22,12 +22,17 @@ export default function Home() {
     await fireCollection.getUsers()
       .then((querySnapshot) => {
         querySnapshot.forEach(function (doc) {
-          const document = { id: doc.id, first: doc.data().first, last: doc.data().last, born: doc.data().born }
+          const document = {
+            id: doc.id,
+            first: doc.data().first,
+            last: doc.data().last,
+            born: doc.data().born
+          }
           data.push(document)
         });
       })
       .catch(error => {
-        console.log(error)
+        Notification('ERROR', 'Something went wrong, try again later.');
       });
     setUsers(data)
     setLoading(false)
@@ -35,13 +40,12 @@ export default function Home() {
 
   function deleteUser(id) {
     fireCollection.deleteUser(id).then(function () {
-      console.log("Document successfully deleted!");
+      Notification('SUCCESS', `Deleted user`);
       getUsers()
     }).catch(function (error) {
-      console.error("Error removing document: ", error);
+      Notification('ERROR', 'Something went wrong, try again later.');
     });
   }
-
 
   if (loading) {
     return <Loading />

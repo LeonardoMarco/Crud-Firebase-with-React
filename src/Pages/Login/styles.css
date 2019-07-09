@@ -1,0 +1,33 @@
+.body-login {
+    background: #3f62e6;
+    min-height: 100vh;
+    padding-top: 10%
+}
+
+.form-auth {
+    background: #f6f7f7;
+    width: 30%;
+    margin: auto;
+    padding: 30px;
+    border-radius: 5px
+}
+
+.input-group-auth {
+    margin-bottom: 20px;
+}
+
+.input-control-auth {
+    width: 96%;
+    display: block;
+    padding: 10px;
+}
+
+.submit-form-auth {
+    width: 100%;
+    padding: 10px;
+    background: #3f62e6;
+    color: white;
+    border: solid 1px transparent;
+    border-radius: 5px;
+
+}

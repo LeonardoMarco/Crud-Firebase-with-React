@@ -1,0 +1,35 @@
+.form-add {
+    width: 30%;
+    margin: auto;
+    margin-top: 4%
+}
+
+.input-group {
+    line-height: 10%;
+    margin-bottom: 20px
+}
+
+.input-group label {
+    margin: 10px;
+    color: #3d3d3d
+}
+
+.input-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 1px #d3d3d3;
+    margin: 10px;
+}
+
+.input-submit {
+    width: 104%;
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 1px #d3d3d3;
+    margin: 10px;
+    display: block;
+    background: #3f62e6;
+    color: white;
+    cursor: pointer;
+}
